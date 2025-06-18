@@ -1,0 +1,19 @@
+<DashboardScreen>:
+    name: 'dashboard'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 20
+
+        Label:
+            id: welcome_label
+            text: "Welcome to the main dashboard"
+            font_size: '20sp'
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        Button:
+            text: "Set Graphical Passwords"
+            size_hint_y: None
+            height: '48dp'
+            on_release: root.go_to_app_locker()

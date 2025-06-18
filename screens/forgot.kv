@@ -1,0 +1,28 @@
+<ForgotPasswordScreen>:
+    name: 'forgot'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "Forgot Password"
+            font_size: '24sp'
+
+        TextInput:
+            id: mobile_input
+            hint_text: "Enter Your Registered Mobile Number"
+            input_filter: 'int'
+
+        Button:
+            text: "Get Password"
+            on_release: root.retrieve_password()
+
+        Label:
+            id: result_label
+            text: ""
+            color: 1, 0, 0, 1
+
+        Button:
+            text: "Back to Login"
+            on_release: root.manager.current = 'login'

@@ -1,0 +1,23 @@
+<ForgotGraphicalScreen>:
+    name: 'forgot_graphical'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        TextInput:
+            id: mobile
+            hint_text: "Enter your mobile number"
+
+        Spinner:
+            id: app_spinner
+            text: "Select App"
+            values: ["app1", "app2", "app3"]
+
+        Button:
+            text: "Retrieve Hint"
+            on_release: root.retrieve_hint()
+
+        Label:
+            id: hint_label
+            text: ""

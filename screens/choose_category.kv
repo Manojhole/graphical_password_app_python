@@ -1,0 +1,21 @@
+<ChooseCategoryScreen>:
+    name: 'choose_category'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 10
+
+        Label:
+            text: "Select Image Category"
+
+        Button:
+            text: "Fruits"
+            on_release: root.set_category('fruits')
+
+        Button:
+            text: "Flowers"
+            on_release: root.set_category('flowers')
+
+        Button:
+            text: "Emojis"
+            on_release: root.set_category('emojis')

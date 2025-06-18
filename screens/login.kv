@@ -1,0 +1,38 @@
+<LoginScreen>:
+    name: 'login'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "Login"
+            font_size: '24sp'
+
+        TextInput:
+            id: mobile_input
+            hint_text: "Mobile Number"
+            input_filter: 'int'
+            multiline: False
+
+        TextInput:
+            id: password_input
+            hint_text: "Password"
+            password: True
+            multiline: False
+
+        Button:
+            text: "Login"
+            on_release: root.login_user()
+
+        BoxLayout:
+            size_hint_y: None
+            height: '40dp'
+
+            Button:
+                text: "New User"
+                on_release: root.manager.current = 'register'
+
+            Button:
+                text: "Forgot Password"
+                on_release: root.manager.current = 'forgot'
